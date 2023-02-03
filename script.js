@@ -11,17 +11,18 @@ function zeroLeft(value) {
 setInterval(function() {
     //Timestamp da data alvo em segundos
     const futureTimestamp = Date.parse("2023-02-06T08:00") / 1000;
-    //Timestamp do momento atual
+    //Timestamp do momento atual em segundos
     const nowTimestamp = new Date().getTime() / 1000;
 
-    const displayTimestamp = futureTimestamp - nowTimestamp;
-    /* console.log(Math.ceil(displayTimestamp / 86400)); */ //Segundos para dias
+    const displayTimestamp = futureTimestamp - nowTimestamp; //Diferença entre os timestamps
 
+    //Cálculos matemáticos para obter os dias, horas, minutos e segundos
     const days = Math.floor(displayTimestamp / 86400);
     const hours = Math.floor((displayTimestamp % 86400) / 3600);
     const minutes = Math.floor(((displayTimestamp % 86400) % 3600) / 60);
     const seconds = Math.floor((((displayTimestamp % 86400) % 3600) % 60) % 60);
 
+    //Atribuindo os valores aos elementos span
     $days.innerText = zeroLeft(days);
     $hours.innerText = zeroLeft(hours);
     $minutes.innerText = zeroLeft(minutes);

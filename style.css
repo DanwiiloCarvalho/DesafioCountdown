@@ -58,6 +58,11 @@ span.subscribe-message {
     justify-content: space-around;
 }
 
+.watch span {
+    width: 247px;
+    text-align: center;
+}
+
 .launch {
     display: flex;
     flex-direction: column;
