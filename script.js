@@ -1,7 +1,12 @@
-/**
- * 1 - Pegar o timestamp do dia 06/02/2023
- * 2 - Pegar o timestamp atual(corrente)
- */
+const $days = document.querySelector(".watch #days");
+const $hours = document.querySelector(".watch #hours");
+const $minutes = document.querySelector(".watch #minutes");
+const $seconds = document.querySelector(".watch #seconds");
+
+//Função para adicionar zero à esquerda de valores menores que dez
+function zeroLeft(value) {
+    return value < 10 ? '0' + value : value;
+}
 
 setInterval(function() {
     //Timestamp da data alvo em segundos
@@ -17,6 +22,8 @@ setInterval(function() {
     const minutes = Math.floor(((displayTimestamp % 86400) % 3600) / 60);
     const seconds = Math.floor((((displayTimestamp % 86400) % 3600) % 60) % 60);
 
-    /* console.log("Dias: " + days + " Horas: " + hours + " minutos: " + minutes + " segundos: " + seconds); */
-    
+    $days.innerText = zeroLeft(days);
+    $hours.innerText = zeroLeft(hours);
+    $minutes.innerText = zeroLeft(minutes);
+    $seconds.innerText = zeroLeft(seconds);
 }, 1000);
