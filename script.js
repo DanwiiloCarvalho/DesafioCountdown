@@ -9,8 +9,12 @@ function zeroLeft(value) {
 }
 
 setInterval(function() {
+    if ($days.innerText == '00' && $hours.innerText == '00' && $minutes.innerText == '00' && $seconds.innerText == '00'){
+        return;
+    }
     //Timestamp da data alvo em segundos
-    const futureTimestamp = Date.parse("2023-02-06T08:00") / 1000;
+    /* const futureTimestamp = Date.parse("2023-02-06T08:00") / 1000; */
+    const futureTimestamp = Date.parse("2023-02-03T19:22") / 1000;
     //Timestamp do momento atual em segundos
     const nowTimestamp = new Date().getTime() / 1000;
 
