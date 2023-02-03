@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.top {
+    background-image: url(images/top-image.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 133px;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    width: 100%;
+    gap: 82px;
+}
+
+.label-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 105%;
+}
+
+span.subscribe-message {
+    color: #9C9AB6;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.watch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.launch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 494px;
+}
+
+.launch h1 {
+    color: #6C63FF;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.105em;
+    text-transform: uppercase;
+    width: 486px;
+    height: 54px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 494px;
+    height: 99px;
+}
+
+
+
+.counter .label-box .label-counter {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #c8c8c8;
+}
+
+/* .label-box .label-counter:first-child ~ span.label-counter {
+    color: red;
+    
+} */
+
+.counter .watch {
+    color: #4d4c59;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 108px;
+}
+
+button.subscribe {
+    width: 160px;
+    height: 46px;
+    background-color: #6C63FF;
+    border-radius: 10px;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.bottom {
+    background-image: url(images/bottom-image.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 229px;
+    width: 100%;
+}
