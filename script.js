@@ -8,10 +8,6 @@ const $subscribeModal = document.querySelector(".subscribe-modal");
 const $closeButton = document.querySelector(".modal-buttons #close");
 const $sendButton = document.querySelector(".modal-buttons #send");
 
-function closeModal() {
-    $modalFullScreen.style.display = 'none';
-}
-
 //Função para adicionar zero à esquerda de valores menores que dez
 function zeroLeft(value) {
     return value < 10 ? '0' + value : value;
@@ -43,18 +39,23 @@ setInterval(function() {
 }, 1000);
 
 //Implementação da abertura do modal clicando no botão inscreva-se
-$subscribeButton.addEventListener("click", () => {
+/* $subscribeButton.addEventListener("click", () => {
     $modalFullScreen.style.display = 'flex';
     
+}); */
+
+//Teste com transição
+$subscribeButton.addEventListener("click", () => {
+    $modalFullScreen.classList.toggle('hide');
 });
 
 //Implementação do fechamento do modal ao clicar fora dele
 $modalFullScreen.addEventListener("click", (event) => {
-    if (event.target === $modalFullScreen) {
-        closeModal();
+    if (event.target === $modalFullScreen) {  
+        $modalFullScreen.classList.add('hide');
     }
 })
 
 $closeButton.addEventListener("click", () => {
-    closeModal();
+    $modalFullScreen.classList.add('hide');
 });
