@@ -135,3 +135,61 @@ button.subscribe {
     height: 229px;
     width: 100%;
 }
+
+.modal-fullscreen {
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    height: 400px;
+}
+
+.subscribe-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 40%;
+    height: 270px;
+    border-radius: 10px;
+    border: 2px solid #cfcece;
+    /* padding: 0 5px; */
+}
+
+.subscribe-modal h2 {
+    padding: 0 7px;
+}
+
+.subscribe-modal div.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 7px;
+    border-top: 2px solid #cfcece;
+    border-bottom: 2px solid #cfcece;
+    flex-basis: 140px;
+    padding: 0 7px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: right;
+    padding: 0 8px;
+    gap: 20px;
+}
+
+.modal-buttons button {
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+
+    padding: 7px 10px;
+    background-color: #6C63FF;
+    letter-spacing: 2px;
+}
+
+button#close {
+    background-color: rgb(241, 100, 100);
+}
