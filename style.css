@@ -137,12 +137,18 @@ button.subscribe {
 }
 
 .modal-fullscreen {
-    /* display: none; */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: lightblue;
-    height: 400px;
+    height: 100vh;
+    width: 100vw;
+
+    /*Modificações no comportamento do modal*/
+    /*display: none*/
+    position: absolute;
+    top: 0;
+    background-color:rgba(192,192,192,0.9);
 }
 
 .subscribe-modal {
@@ -150,15 +156,18 @@ button.subscribe {
     flex-direction: column;
     justify-content: space-evenly;
     background-color: white;
-    width: 40%;
-    height: 270px;
+    width: 550px;
+    height: 380px;
     border-radius: 10px;
-    border: 2px solid #cfcece;
-    /* padding: 0 5px; */
+    
+    border: 2px solid rgb(201, 197, 197);
+    box-shadow: 2px 3px 5px rgb(104, 104, 104);
 }
 
 .subscribe-modal h2 {
     padding: 0 7px;
+    font-weight: 500;
+    font-size: 1.7rem;
 }
 
 .subscribe-modal div.fields {
@@ -166,18 +175,33 @@ button.subscribe {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 7px;
+    gap: 14px;
     border-top: 2px solid #cfcece;
     border-bottom: 2px solid #cfcece;
-    flex-basis: 140px;
+    flex-basis: 200px;
     padding: 0 7px;
+
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+div.fields input {
+    font-size: 1rem;
+    padding: 3px;
+    font-weight: 200;
+    border-radius: 5px;
+    border: 1px #cfcece solid;
+}
+
+div.fields input:focus {
+    outline: #007bff solid 3px;
 }
 
 .modal-buttons {
     display: flex;
     justify-content: right;
-    padding: 0 8px;
-    gap: 20px;
+    padding: 0 15px;
+    gap: 25px;
 }
 
 .modal-buttons button {
@@ -188,8 +212,15 @@ button.subscribe {
     padding: 7px 10px;
     background-color: #6C63FF;
     letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 button#close {
     background-color: rgb(241, 100, 100);
+}
+
+button#close:hover, button#send:hover {
+    filter: grayscale(0.4);
+    transition: 0.5s;
 }
