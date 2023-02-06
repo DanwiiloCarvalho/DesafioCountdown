@@ -8,6 +8,10 @@ const $subscribeModal = document.querySelector(".subscribe-modal");
 const $closeButton = document.querySelector(".modal-buttons #close");
 const $sendButton = document.querySelector(".modal-buttons #send");
 
+function closeModal() {
+    $modalFullScreen.style.display = 'none';
+}
+
 //Função para adicionar zero à esquerda de valores menores que dez
 function zeroLeft(value) {
     return value < 10 ? '0' + value : value;
@@ -47,6 +51,10 @@ $subscribeButton.addEventListener("click", () => {
 //Implementação do fechamento do modal ao clicar fora dele
 $modalFullScreen.addEventListener("click", (event) => {
     if (event.target === $modalFullScreen) {
-        $modalFullScreen.style.display = 'none';
+        closeModal();
     }
 })
+
+$closeButton.addEventListener("click", () => {
+    closeModal();
+});
