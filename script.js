@@ -2,6 +2,9 @@ const $days = document.querySelector(".watch #days");
 const $hours = document.querySelector(".watch #hours");
 const $minutes = document.querySelector(".watch #minutes");
 const $seconds = document.querySelector(".watch #seconds");
+const $subscribeButton = document.querySelector("button.subscribe");
+const $modalFullScreen = document.querySelector("div.modal-fullscreen");
+const $subscribeModal = document.querySelector(".subscribe-modal");
 
 //Função para adicionar zero à esquerda de valores menores que dez
 function zeroLeft(value) {
@@ -32,3 +35,12 @@ setInterval(function() {
     $minutes.innerText = zeroLeft(minutes);
     $seconds.innerText = zeroLeft(seconds);
 }, 1000);
+
+//Implementação da abertura do modal clicando no botão inscreva-se
+$subscribeButton.addEventListener("click", () => {
+    $modalFullScreen.style.display = 'flex'; 
+})
+
+/* $modalFullScreen.addEventListener("click", () => {
+
+}) */

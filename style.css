@@ -137,7 +137,7 @@ button.subscribe {
 }
 
 .modal-fullscreen {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: lightblue;
@@ -145,7 +145,7 @@ button.subscribe {
     width: 100vw;
 
     /*Modificações no comportamento do modal*/
-    /*display: none*/
+    /*display: none*/ /*ou flex*/
     position: absolute;
     top: 0;
     background-color:rgba(192,192,192,0.9);
