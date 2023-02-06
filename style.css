@@ -214,6 +214,7 @@ div.fields input:focus {
     letter-spacing: 2px;
     font-size: 0.9rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 button#close {
