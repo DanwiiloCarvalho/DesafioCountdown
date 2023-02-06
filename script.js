@@ -14,7 +14,7 @@ setInterval(function() {
     }
     //Timestamp da data alvo em segundos
     /* const futureTimestamp = Date.parse("2023-02-06T08:00") / 1000; */
-    const futureTimestamp = Date.parse("2023-02-03T19:22") / 1000;
+    const futureTimestamp = Date.parse("2023-06-24T19:22") / 1000;
     //Timestamp do momento atual em segundos
     const nowTimestamp = new Date().getTime() / 1000;
 
