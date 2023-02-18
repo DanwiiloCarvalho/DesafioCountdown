@@ -79,7 +79,7 @@ span.subscribe-message {
     letter-spacing: 0.105em;
     text-transform: uppercase;
     width: 486px;
-    height: 54px;
+    /* height: 54px; */
 }
 
 .counter {
